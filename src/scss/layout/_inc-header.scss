@@ -156,6 +156,115 @@
 }
     
 
+.reservation-modal {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #b66838;
+    border-radius: 10px;
+    border: 1.5px solid #333;
+
+    .modal-block {
+
+        .block-title {
+            text-align: end;
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-decoration: overline;
+            color: #f08645;
+        }
+
+        .block-subtitle {
+            text-align: end;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .block-order {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+
+            .order-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                & input {
+                    max-width: 150px;
+                    width: 100%;
+                    border: 1px solid rgb(224, 190, 36);
+                    border-radius: 4px;
+
+                    &:focus-visible {
+                        outline: 0;
+                    }
+                }
+
+                .item_date {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex: 0 0 50%;
+                }
+
+                .item_row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex: 0 0 50%;
+                }
+
+                .item_time {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex: 0 0 50%;
+                }
+
+                .item_place {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex: 0 0 50%;
+                }
+            }
+        }
+
+        .block-accept {
+            text-align: center;
+
+            & button {
+                display: inline-block;
+                background-color: #D5621D;
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 18px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                
+
+                &:focus-visible {
+                    outline: 0;
+                }
+
+                &:active {
+                    border-style: none;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 
 
