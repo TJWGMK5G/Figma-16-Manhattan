@@ -1,6 +1,11 @@
 .header {
+    position: fixed;
+    z-index: 999;
+    background: #210e09;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 55px;
+    border-bottom: 1px solid grey;
 
     @media(max-width:556.99px) {
         padding: 20px 0px;
@@ -157,7 +162,11 @@
     
 
 .reservation-modal {
-    position: absolute;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
     top: 50%;
     right: 50%;
@@ -168,11 +177,43 @@
     background-color: #b66838;
     border-radius: 10px;
     border: 1.5px solid #333;
+    // position: fixed;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    // left: 0;
+    // overflow: hidden;
+    // overflow-y: auto;
+    // -webkit-overflow-scrolling: touch;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: center; /* см. ниже */
+    // align-items: center;
+    // z-index: 99;
+    // /* Чтобы окно не прилипало к границе
+    // браузера установим отступы */
+    // padding:30px 0;
+
+    &_picture {
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: 0;
+        margin: 2px 2px 0px 0px;
+        transition: 0.5s ease;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 
     .modal-block {
 
         .block-title {
-            text-align: end;
+            text-align: start;
             font-size: 30px;
             margin-bottom: 10px;
             text-decoration: overline;
@@ -180,7 +221,7 @@
         }
 
         .block-subtitle {
-            text-align: end;
+            text-align: start;
             font-size: 20px;
             color: #333;
             margin-bottom: 60px;
@@ -213,6 +254,7 @@
                     align-items: center;
                     justify-content: space-between;
                     flex: 0 0 50%;
+                    gap: 10px;
                 }
 
                 .item_row {
@@ -220,6 +262,7 @@
                     align-items: center;
                     justify-content: space-between;
                     flex: 0 0 50%;
+                    gap: 10px;
                 }
 
                 .item_time {
@@ -227,6 +270,7 @@
                     align-items: center;
                     justify-content: space-between;
                     flex: 0 0 50%;
+                    gap: 10px;
                 }
 
                 .item_place {
@@ -234,6 +278,7 @@
                     align-items: center;
                     justify-content: space-between;
                     flex: 0 0 50%;
+                    gap: 10px;
                 }
             }
         }
@@ -242,6 +287,7 @@
             text-align: center;
 
             & button {
+                cursor: pointer;
                 display: inline-block;
                 background-color: #D5621D;
                 border-radius: 5px;
@@ -249,6 +295,8 @@
                 font-size: 18px;
                 letter-spacing: 2px;
                 text-transform: uppercase;
+                border: 1px solid rgb(102, 101, 101);
+                transition: 0.3s ease;
                 
 
                 &:focus-visible {
@@ -257,6 +305,11 @@
 
                 &:active {
                     border-style: none;
+                }
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid #fff;
                 }
             }
         }

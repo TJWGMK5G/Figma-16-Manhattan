@@ -51,6 +51,26 @@
     closePassive.classList.toggle('header-burger_close-active')
   })
 
+
+  //Reservation button 
+  let btnReserv = document.querySelector('.header__reservation')
+  let btnClose = document.querySelector('.reservation-modal_picture')
+
+  btnReserv.addEventListener('click' , function() {
+    document.querySelector('.reservation-modal').classList.toggle('visible-item')
+    document.body.classList.toggle('body-active') 
+  })
+
+  btnClose.addEventListener('click' , function() {
+    document.querySelector('.reservation-modal').classList.remove('visible-item')
+    document.body.classList.remove('body-active') 
+  })
+
+  
+
+
+
+
   // closePassive.addEventListener('click' , function() {
   //   burgerMenu.classList.remove('header-burger-active')
   // })
