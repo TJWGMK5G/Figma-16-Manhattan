@@ -64,6 +64,11 @@
   text-align: center;
 }
 
+.display-right {
+  display: flex;
+  justify-content: end;
+}
+
 .padding-left {
   padding-left: 65px;
 

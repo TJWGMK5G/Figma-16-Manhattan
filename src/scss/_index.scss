@@ -225,6 +225,10 @@
                 border-radius: 5px;
             }
 
+            &:hover .info-block_price {
+                background-color: #D5621D;
+            }
+
             @media(max-width:556.99px) {
                 margin-bottom: 25px;
               }
@@ -261,6 +265,7 @@
                         padding: 10px 20px;
                         border-radius: 5px;
                         border: 2px solid var(--accent, #D5621D);
+                        transition: 0.3s ease;
 
                         @media(max-width:768.99px) {
                             margin-bottom: 10px;
@@ -773,9 +778,12 @@
 }
 
 .visible-item {
-    display: block;
+    display: flex;
 }
 
+.opacity-body {
+    opacity: 0.2;
+}
 
 
 
