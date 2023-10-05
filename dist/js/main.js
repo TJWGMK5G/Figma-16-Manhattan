@@ -12,16 +12,28 @@
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     // direction: 'vertical',
-    loop: true,
-    delay: 5000,
-    enabled: true,
-    fill: "column",
-    rows: 4,
-    crossFade: true,
-  
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
+    // loop: true,
+    // delay: 5000,
+    // enabled: true,
+    // fill: "column",
+    // rows: 4,
+    // crossFade: true,
+
+    grabCursor: true,
+    slideToClickedSlide: true,
+
+    slidePerView: 2.5,
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+
+    // autoplay: {
+    //   delay: 1000,
+    //   stopOnLastSlide: true,
+    //   disableOnInteraction: false,
     // },
   
     // Navigation arrows
@@ -29,12 +41,7 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
+
   });
 
 
@@ -128,6 +135,7 @@
       document.querySelector('.kitchen-menu').classList.remove('swiper')
       document.querySelector('.swiper-btns').style.display = 'none';
       document.querySelector('.swiper-wrapper').classList.add('row') 
+      document.querySelector('.swiper-wrapper').style.transform = "translate3d(0px, 0px, 0px)"
       e.classList.toggle('visible-item')
       if(e.classList.toggle('visible-item"'))
       {
@@ -140,8 +148,6 @@
       }
     })
   })
-
-
 
 
   // TABS 

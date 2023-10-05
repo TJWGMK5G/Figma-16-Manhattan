@@ -786,7 +786,10 @@
 }
 
 
-
+.swiper-position {
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, 0px);
+}
 
 
 
