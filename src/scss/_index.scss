@@ -4,6 +4,7 @@
 
     @media(max-width: 768.99px) {
         margin-bottom: 80px;
+        margin-top: 100px;
     }
 
     @media(max-width: 768.99px) {
@@ -510,6 +511,10 @@
 
         .items-tabs {
 
+            // @media(max-width:768.99px) {
+            //     flex: 0 0 50%;
+            // }
+
             .tabs-block {
                 cursor: pointer;
                 border-radius: 5px;
@@ -791,6 +796,9 @@
     transform: translate3d(0px, 0px, 0px);
 }
 
+.swiper-button-prev, .swiper-button-next {
+    top: 60%;
+}
 
 
 

@@ -7,7 +7,6 @@
     // onclick="refresh()" вставить в див
 
 
-
   //swiper сладйер - доделать под макет  
   const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -22,7 +21,11 @@
     grabCursor: true,
     slideToClickedSlide: true,
 
-    slidePerView: 2.5,
+    slidePerView: 2,
+    spaceBeetwen: 40,
+
+    // fill: "row",
+    // rows: 6,
 
     keyboard: {
       enabled: true,
@@ -136,6 +139,7 @@
       document.querySelector('.swiper-btns').style.display = 'none';
       document.querySelector('.swiper-wrapper').classList.add('row') 
       document.querySelector('.swiper-wrapper').style.transform = "translate3d(0px, 0px, 0px)"
+      e.classList.add('col-6')
       e.classList.toggle('visible-item')
       if(e.classList.toggle('visible-item"'))
       {
@@ -145,6 +149,7 @@
       document.querySelector('.kitchen-menu').classList.add('swiper')
       document.querySelector('.swiper-btns').style.display = 'block';
       document.querySelector('.swiper-wrapper').classList.remove('row') 
+      e.classList.remove ('col-6')
       }
     })
   })
