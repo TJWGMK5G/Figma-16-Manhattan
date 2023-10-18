@@ -9,43 +9,55 @@
 
   //swiper сладйер - доделать под макет  
   const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    // loop: true,
-    // delay: 5000,
-    // enabled: true,
-    // fill: "column",
-    // rows: 4,
-    // crossFade: true,
-
     grabCursor: true,
     slideToClickedSlide: true,
-
-    slidePerView: 2,
-    spaceBeetwen: 40,
-
-    // fill: "row",
-    // rows: 6,
+    slidesPerView: 2.4,
+    // spaceBetween: 20,
 
     keyboard: {
       enabled: true,
       onlyInViewport: true,
       pageUpDown: true,
     },
-
-    // autoplay: {
-    //   delay: 1000,
-    //   stopOnLastSlide: true,
-    //   disableOnInteraction: false,
-    // },
   
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
   });
+
+  // Swiper Всё меню (Кнопка) - Работает 
+  let menuAll = document.querySelector('.kitchen-menu_a')
+  let itemMenu = document.querySelectorAll('.swiper-slide')
+
+  document.querySelector('.swiper-slide-active').style.margin = '0px 30px 0px 0px'
+  document.querySelector('.swiper-slide-next').style.margin = '0px 30px 0px 0px'
+  
+  menuAll.addEventListener('click' , function() {
+    itemMenu.forEach(function(e) {
+      document.querySelector('.kitchen-menu').classList.remove('swiper')
+      document.querySelector('.swiper-btns').style.display = 'none';
+      document.querySelector('.swiper-wrapper').classList.add('row') 
+      document.querySelector('.swiper-wrapper').style.transform = "translate3d(0px, 0px, 0px)"
+      document.querySelector('.swiper-slide-active').style.margin = '0px 0px 0px 0px'
+  document.querySelector('.swiper-slide-next').style.margin = '0px 0px 0px 0px'
+      e.classList.add('col-6')
+      e.classList.toggle('visible-item')
+      if(e.classList.toggle('visible-item"'))
+      {
+        menuAll.textContent = 'Скрыть'
+      } else {
+        menuAll.textContent = 'Всё меню'
+      document.querySelector('.kitchen-menu').classList.add('swiper')
+      document.querySelector('.swiper-btns').style.display = 'block';
+      document.querySelector('.swiper-wrapper').classList.remove('row') 
+      document.querySelector('.swiper-slide-active').style.margin = '0px 30px 0px 0px'
+  document.querySelector('.swiper-slide-next').style.margin = '0px 30px 0px 0px'
+      e.classList.remove ('col-6')
+      }
+    })
+  })
 
 
 
@@ -128,31 +140,6 @@
     })
   }
 
-
-  // Swiper Всё меню (Кнопка) - Работает 
-  let menuAll = document.querySelector('.kitchen-menu_a')
-  let itemMenu = document.querySelectorAll('.swiper-slide')
-  
-  menuAll.addEventListener('click' , function() {
-    itemMenu.forEach(function(e) {
-      document.querySelector('.kitchen-menu').classList.remove('swiper')
-      document.querySelector('.swiper-btns').style.display = 'none';
-      document.querySelector('.swiper-wrapper').classList.add('row') 
-      document.querySelector('.swiper-wrapper').style.transform = "translate3d(0px, 0px, 0px)"
-      e.classList.add('col-6')
-      e.classList.toggle('visible-item')
-      if(e.classList.toggle('visible-item"'))
-      {
-        menuAll.textContent = 'Скрыть'
-      } else {
-        menuAll.textContent = 'Всё меню'
-      document.querySelector('.kitchen-menu').classList.add('swiper')
-      document.querySelector('.swiper-btns').style.display = 'block';
-      document.querySelector('.swiper-wrapper').classList.remove('row') 
-      e.classList.remove ('col-6')
-      }
-    })
-  })
 
 
   // TABS 

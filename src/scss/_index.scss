@@ -194,8 +194,14 @@
         }
     }
 
-    .kitchen-menu {
+    &-swiper {
         padding: 0px 60px;
+
+        
+    }
+
+    &-menu {
+        // padding: 0px 60px;
         margin-bottom: 60px;
 
         @media(max-width:996.99px) {
@@ -801,7 +807,9 @@
 }
 
 
-
+// .swiper-slide-active, .swiper-slide-next {
+//     margin-right: 50px;
+// }
 
 
 
